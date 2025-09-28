@@ -16,7 +16,7 @@ app = FastAPI(title="AutoU Email Analysis API")
 
 origins = [
     os.getenv("FRONTEND_URL", "http://localhost:3000"),
-    "https://*.onrender.com", 
+    "https://automailrenderfront.onrender.com", 
 ]
 app.add_middleware(
     CORSMiddleware,
