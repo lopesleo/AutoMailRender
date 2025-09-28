@@ -1,7 +1,6 @@
 import "./App.css";
 
 import type React from "react";
-
 import { useState, useRef, useCallback } from "react";
 import {
   Card,
@@ -106,8 +105,8 @@ export default function App() {
         setIsAnalyzing(false);
         return;
       }
-
-      const response = await fetch("/api/email/analyze", {
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+      const response = await fetch(`${API_BASE_URL}/api/email/analyze`, {
         method: "POST",
         body: formData,
       });

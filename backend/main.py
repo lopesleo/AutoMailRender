@@ -16,7 +16,7 @@ app = FastAPI(title="AutoU Email Analysis API")
 
 origins = [
     os.getenv("FRONTEND_URL", "http://localhost:3000"),
-    "https://*.vercel.app", 
+    "https://*.onrender.com", 
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -34,7 +34,7 @@ async def root():
 async def health_check():
     return {"status": "healthy", "service": "email-analysis"}
 
-@app.post("/email/analyze", response_model=EmailAnalysisResponse)
+@app.post("/api/email/analyze", response_model=EmailAnalysisResponse)
 async def analyze_email(
     content: Optional[str] = Form(None), 
     file: Optional[UploadFile] = None
