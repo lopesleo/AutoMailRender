@@ -1,7 +1,5 @@
-================================================================================
-AutoU Email Analyzer - Guia Técnico
+
 Produção (Frontend): https://automailrenderfront.onrender.com/
-================================================================================
 
 ÍNDICE
 
